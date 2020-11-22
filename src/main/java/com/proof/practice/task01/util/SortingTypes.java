@@ -1,8 +1,21 @@
 package com.proof.practice.task01.util;
 
+import java.util.Arrays;
+
 public class SortingTypes {
 
     public static void main(String[] args) {
+
+
+        int[] arr = {-1,-3,-2,-5,-4};
+
+        System.out.println(Arrays.toString(arr));
+
+        selectionSort(arr);
+
+
+
+        System.out.println(Arrays.toString(arr));
 
 
 
@@ -10,22 +23,38 @@ public class SortingTypes {
 
     // done мой код
     public static void bubbleSortWithFor(int[] array){
+        // По убыванию
+        for(int q = 1 ; q < array.length ; q++){
 
-        for(int q = array.length - 1; q >= 0 ; q--){
+            if(array[q] > array[q - 1]){
 
-            for(int w = 0; w < q; w++){
-
-                if(array[w] > array[w + 1]){
-
-                    int temp = array[w];
-                    array[w] = array[w + 1];
-                    array[w + 1] = temp;
-
-                }
+                int temp = array[q];
+                array[q] = array[q - 1];
+                array[q - 1] = temp;
 
             }
 
         }
+
+
+
+
+//        // по возростанию
+//        for(int q = array.length - 1; q >= 0 ; q--){
+//
+//            for(int w = 0; w < q; w++){
+//
+//                if(array[w] > array[w + 1]){
+//
+//                    int temp = array[w];
+//                    array[w] = array[w + 1];
+//                    array[w + 1] = temp;
+//
+//                }
+//
+//            }
+//
+//        }
 
     }
     // done мой код
@@ -89,6 +118,9 @@ public class SortingTypes {
     }
     // done мой код
     public static void selectionSort(int[] array){
+
+
+
 
         for(int first = 0; first < array.length; first++){
 
