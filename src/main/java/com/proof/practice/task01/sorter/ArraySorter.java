@@ -15,9 +15,9 @@ public class ArraySorter {
         if(sortType == SortType.BUBBLE_SORT){
             BUBBLE_SORTER.sort(array);
         }else if(sortType == SortType.SelectionSorter){
-            BUBBLE_SORTER.sort(array);
+            SELECTION_SORTER.sort(array);
         }else if(sortType == SortType.MergeSorter){
-            BUBBLE_SORTER.sort(array);
+            MERGE_SORTER.sort(array);
         }
     }
 }
