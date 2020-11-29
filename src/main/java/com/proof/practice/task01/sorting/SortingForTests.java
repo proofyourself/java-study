@@ -1,8 +1,21 @@
-package com.proof.practice.task01.util;
+package com.proof.practice.task01.sorting;
+
 
 import java.util.Arrays;
 
-public class SortingTypes {
+public class SortingForTests {
+
+    public static void main(String[] args) {
+
+        int[] array = {-1,3,2,1,4,0};
+
+        System.out.println(Arrays.toString(array));
+
+        insertionSortForTest(array);
+
+        System.out.println(Arrays.toString(array));
+
+    }
 
     public static void bubbleSortWithFor(int[] array){
         for (int i = 0; i < array.length - 1; i++) {
@@ -31,6 +44,19 @@ public class SortingTypes {
                     isСondition = true;
                 }
             }
+        }
+    }
+
+    public static void insertionSortForTest(int array[]) {
+        int n = array.length;
+        for (int j = 1; j < n; j++) {
+            int key = array[j];
+            int i = j-1;
+            while ( (i > -1) && ( array [i] > key ) ) {
+                array [i+1] = array [i];
+                i--;
+            }
+            array[i+1] = key;
         }
     }
 
@@ -154,3 +180,4 @@ public class SortingTypes {
         System.arraycopy(buffer, 0, source, left, buffer.length);
     }
 }
+
