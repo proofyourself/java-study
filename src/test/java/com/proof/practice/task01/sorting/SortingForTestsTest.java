@@ -24,4 +24,8 @@ public class SortingForTestsTest {
         sortingForTests.insertionSortForTest(array);
     }
 
+    @Test(expected = Exception.class)
+    public void shouldThrowException() {
+
+    }
 }
